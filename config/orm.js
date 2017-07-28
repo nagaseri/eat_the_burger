@@ -24,7 +24,7 @@ function objToSql(ob) {
 
 // Object for all our SQL statement functions.
 var Burger = {
-  select: function (table, tableInput, cb) {
+  select: function (tableInput, cb) {
     var queryString = "SELECT * FROM " + tableInput + ";";
     connection.query(queryString, function (err, result) {
       if (err) {
@@ -33,6 +33,7 @@ var Burger = {
       cb(result);
     });
   },
+  //why do we pass table here as an argument?
   insert: function (table, cols, vals, cb) {
     var queryString = "INSERT INTO " + table;
 
