@@ -21,7 +21,7 @@
 
 	<ul>
 		{{#each burgers}}
-			{{#if this.sleepy}}
+			{{#if this.devoured}}
 				<li>
 					{{this.name}}
 					<form action="/{{this.id}}?_method=PUT" method="POST">
