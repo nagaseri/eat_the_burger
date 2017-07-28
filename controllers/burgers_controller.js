@@ -28,7 +28,7 @@ router.put("/:id", function(req, res) {
   console.log("condition", condition);
 
   burger.update({
-  	burger_name: req.body.name
+  	devoured: req.body.devoured
   }, condition, function() {
     res.redirect("/");
   });
